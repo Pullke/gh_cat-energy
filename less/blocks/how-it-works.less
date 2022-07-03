@@ -1,0 +1,81 @@
+// How-it-works
+
+.how-it-works {
+  padding-bottom: 40px;
+}
+
+.how-it-works__list {
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-areas:
+      "leaf tub"
+      "eat alarm";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-areas: "leaf tub eat alarm";
+  }
+}
+
+.how-it-works__item {
+  display: grid;
+  min-height: 60px;
+  background-repeat: no-repeat;
+  background-position: left;
+
+  &--leaf {
+    background-image: url("../img/icons/icon_leaf.svg");
+  }
+
+  &--tub {
+    background-image: url("../img/icons/icon_tub.svg");
+  }
+
+  &--eat {
+    background-image: url("../img/icons/icon_eat.svg");
+  }
+
+  &--alarm {
+    background-image: url("../img/icons/icon_alarm.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    &--leaf {
+      background-image: url("../img/icons/icon_leaf.svg");
+      grid-area: leaf;
+    }
+
+    &--tub {
+      background-image: url("../img/icons/icon_tub.svg");
+      grid-area: tub;
+    }
+
+    &--eat {
+      background-image: url("../img/icons/icon_eat.svg");
+      grid-area: eat;
+    }
+
+    &--alarm {
+      background-image: url("../img/icons/icon_alarm.svg");
+      grid-area: alarm;
+    }
+  }
+}
+
+.how-it-works__text {
+  align-self: center;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: @special_dark-grey;
+  padding-left: 80px;
+  width: 200px;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 80px;
+  }
+}

@@ -1,0 +1,23 @@
+// Social-list
+
+.social-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 24px 0;
+  border-top: 1px solid @special_grey;
+  border-bottom: 1px solid @special_grey;
+}
+
+.social-list__icon {
+  &:hover {
+    path {
+      fill: @basic_green;
+    }
+  }
+
+  &:active {
+    fill-opacity: 0.3;
+  }
+}

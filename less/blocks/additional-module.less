@@ -1,0 +1,28 @@
+// Additional-module
+
+.additional-module {
+  @media (min-width: @desktop-width) {
+    grid-area: additional-module;
+  }
+}
+
+.additional-module__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.additional-module input {
+  flex-grow: 0;
+}
+
+.additional-module__item label {
+  color: @basic_black;
+}

@@ -1,0 +1,91 @@
+// Additional
+
+.additional {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.additional__title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.additional__list {
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+  }
+}
+
+.additional__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
+    margin: 30px 0;
+  }
+}
+
+.additional__list h3 {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    width: 50%;
+  }
+}
+
+.additional__description-list {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 50%;
+    justify-content: flex-end;
+  }
+}
+
+.additional__description-list span {
+  text-transform: uppercase;
+}
+
+.additional__button {
+  width: 100%;
+}
+
+.additional__box {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.additional__box-text {
+  width: 161px;
+
+  @media (min-width: @desktop-width) {
+    justify-self: end;
+    align-self: end;
+  }
+}
