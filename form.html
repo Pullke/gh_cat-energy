@@ -18,7 +18,7 @@
         <a class="page-header__logo--2 link" href="index.html">
           <img src="img/logo/footer-logo.svg" width="101" height="18" alt="">
         </a>
-      <nav class="page-header__main-nav main-nav main-nav--closed">
+      <nav class="page-header__main-nav main-nav main-nav__form main-nav--closed">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -36,15 +36,19 @@
       </nav>
     </header>
 
-    <main class="page-main wrapper">
+    <main class="page-main">
       <h1 class="page-main__title title">Подбор программы</h1>
 
       <section class="form">
         <h2 class="visually-hidden">Форма</h2>
         <form class="form-main" action="https://echo.htmlacademy.ru" method="get" target="_blank">
-          <div class="form-main__title">Заполните анкету, и мы подберем программу питания для вашего кота</div>
-          <fieldset class="cat-data">
-            <ul class="cat-data__list">
+          <div class="form-main__title">
+            Заполните анкету, и мы подберем<br>
+            программу питания для вашего кота
+          </div>
+
+          <fieldset class="cat-data form-main__fieldset">
+            <ul class="cat-data__list form-main__fieldset-list list">
               <li class="cat-data__item">
                 <label for="name">Имя:*</label>
                 <input class="cat-data__input" type="text" name="name" placeholder="Барсик" id="name" required>
@@ -60,8 +64,8 @@
             </ul>
           </fieldset>
 
-          <fieldset class="program-selection">
-            <ul class="program-selection__list">
+          <fieldset class="program-selection form-main__fieldset">
+            <ul class="program-selection__list form-main__fieldset-list list">
               <li class="program-selection__item">
                 <input class="program-selection__radio visually-hidden" type="radio" name="program" id="weight-loss" checked>
                 <label class="program-selection__label" for="weight-loss">Похудение</label>
@@ -77,9 +81,9 @@
             </ul>
           </fieldset>
 
-          <fieldset class="user-data">
-            <legend  class="user-data__title">Контактные данные(владельца кота)</legend>
-            <ul class="user-data__list">
+          <fieldset class="user-data form-main__fieldset">
+            <legend  class="form-main__fieldset-title">Контактные данные (владельца кота)</legend>
+            <ul class="user-data__list form-main__fieldset-list list">
               <li class="user-data__item">
                 <label class="user-data__label" for="login">E-mail:*</label>
                 <input class="user-data__input user-data__input--email" type="email" name="user-name" placeholder="kuklachev@gmail.com" id="login" required>
@@ -91,14 +95,14 @@
             </ul>
           </fieldset>
 
-          <fieldset class="comment">
-            <legend class="comment__title">Комментарий</legend>
+          <fieldset class="comment form-main__fieldset">
+            <legend class="form-main__fieldset-title">Комментарий</legend>
             <textarea class="comment__textarea" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
-          <fieldset class="additional-module">
-            <legend class="comment__title">Дополнительно</legend>
-            <ul class="additional-module__list">
+          <fieldset class="additional-module form-main__fieldset">
+            <legend class="form-main__fieldset-title">Дополнительно</legend>
+            <ul class="additional-module__list form-main__fieldset-list list">
               <li class="additional-module__item">
                 <input class="additional-module__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
                 <label for="sweetener">Сахарозаменитель</label>
@@ -123,12 +127,20 @@
       </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer main-footer--form">
       <section class="map">
         <div class="map__headline wrapper">
           <h2 class="visually-hidden">Карта</h2>
-          <p class="map__invitation">Приглашаемк сотрудничеству дилеров!</p>
-          <p class="map__adress">ул. БольшаяКонюшенная, д. 19/8Санкт-Петербург</p>
+          <p class="map__invitation">
+            Приглашаем<br>
+            к сотрудничеству<br>
+            дилеров!
+          </p>
+          <p class="map__adress">
+            ул. Большая<br>
+            Конюшенная, д. 19/8<br>
+            Санкт-Петербург
+          </p>
         </div>
         <img class="map__img" src="img/map.jpg" width="320" height="362" alt="Карта">
       </section>

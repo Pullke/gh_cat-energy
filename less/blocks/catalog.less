@@ -5,11 +5,23 @@
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 80px;
+    margin: 0 110px;
   }
 }
 
 .catalog__item {
   @media (min-width: @tablet-width) {
-    display: flex;
+    display: grid;
+    width: 324px;
+    align-items: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
   }
 }

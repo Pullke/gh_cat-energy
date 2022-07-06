@@ -1,9 +1,22 @@
 // Form-main
 
 .form-main {
-  @media (min-width: @desktop-width) {
-    display: grid;
+  display: grid;
+
+  @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, min-content);
+    grid-template-areas:
+      "title title"
+      "cat-data cat-data"
+      "program-selection program-selection"
+      "user-data user-data"
+      "comment comment"
+      "additional-module additional-module"
+      "button prompt";
+  }
+
+  @media (min-width: @desktop-width) {
     grid-template-areas:
       "title title"
       "cat-data program-selection"
@@ -15,23 +28,32 @@
 }
 
 .form-main__title {
-  width: 226px;
+  padding: 10px 20px 20px;
 
   @media (min-width: @tablet-width) {
-    width: 323px;
     font-size: 20px;
     line-height: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
     grid-area: title;
   }
+}
+
+.form-main__fieldset {
+  margin: 0;
+  padding: 20px 20px 24px;
+  border: none;
+}
+
+.form-main__fieldset-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
 }
 
 .form-main li {
   flex-grow: 1;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   font-size: 16px;
   color: @special_dark-grey;
 
@@ -41,16 +63,11 @@
   }
 }
 
-.form-main fieldset {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-.form-main legend:not(.form-main__title) {
+.form-main__fieldset-title {
   text-transform: none;
   font-size: 24px;
   line-height: 26px;
+  padding-top: 26px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -64,14 +81,18 @@
 
 .form-main input,
 .form-main textarea {
-  margin-bottom: 14px;
   padding-left: 15px;
   font-size: 16px;
   flex-grow: 1;
   text-transform: uppercase;
-  height: 45px;
+  min-height: 45px;
   border: 1px solid @special_grey-5;
   box-sizing: border-box;
+}
+
+.form-main textarea {
+  min-height: 150px;
+  resize: none;
 }
 
 .form-main input::placeholder,
@@ -86,6 +107,7 @@
 }
 
 .form-main__button {
+  margin: 0 20px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -93,18 +115,20 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 0;
-  }
-
-  @media (min-width: @tablet-width) {
     grid-area: button;
   }
 }
 
 .form-main__prompt {
+  padding-top: 21px;
+  text-align: center;
   font-family: "Arial", sans-serif;
   text-transform: none;
 
   @media (min-width: @tablet-width) {
     grid-area: prompt;
+    padding: 0;
+    justify-self: start;
+    align-self: center;
   }
 }

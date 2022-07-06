@@ -1,81 +1,68 @@
 // How-it-works
 
 .how-it-works {
+  padding-top: 27px;
   padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+  }
+}
+
+.how-it-works__title {
+  padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 32px;
+  }
 }
 
 .how-it-works__list {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 60px);
   gap: 20px;
 
   @media (min-width: @tablet-width) {
-    grid-template-areas:
-      "leaf tub"
-      "eat alarm";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-areas: "leaf tub eat alarm";
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .how-it-works__item {
   display: grid;
-  min-height: 60px;
-  background-repeat: no-repeat;
-  background-position: left;
-
-  &--leaf {
-    background-image: url("../img/icons/icon_leaf.svg");
-  }
-
-  &--tub {
-    background-image: url("../img/icons/icon_tub.svg");
-  }
-
-  &--eat {
-    background-image: url("../img/icons/icon_eat.svg");
-  }
-
-  &--alarm {
-    background-image: url("../img/icons/icon_alarm.svg");
-  }
+  grid-template-columns: 60px 1fr;
+  align-items: center;
+  min-width: 250px;
+  min-height: auto;
 
   @media (min-width: @tablet-width) {
-    &--leaf {
-      background-image: url("../img/icons/icon_leaf.svg");
-      grid-area: leaf;
-    }
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    min-width: 230px;
 
-    &--tub {
-      background-image: url("../img/icons/icon_tub.svg");
-      grid-area: tub;
-    }
-
-    &--eat {
-      background-image: url("../img/icons/icon_eat.svg");
-      grid-area: eat;
-    }
-
-    &--alarm {
-      background-image: url("../img/icons/icon_alarm.svg");
-      grid-area: alarm;
+    svg {
+      width: 80px;
+      height: 80px;
     }
   }
 }
 
 .how-it-works__text {
-  align-self: center;
   margin: 0;
   font-family: "Arial", sans-serif;
   color: @special_dark-grey;
-  padding-left: 80px;
-  width: 200px;
+  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
-    display: inline;
+    width: 245px;
     font-size: 16px;
     line-height: 24px;
-    padding-left: 80px;
+    padding-left: 0;
   }
 }

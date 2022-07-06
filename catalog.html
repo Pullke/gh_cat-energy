@@ -18,7 +18,7 @@
         <a class="page-header__logo--2 link" href="index.html">
           <img src="img/logo/footer-logo.svg" width="101" height="18" alt="">
         </a>
-      <nav class="page-header__main-nav main-nav main-nav--closed">
+      <nav class="page-header__main-nav main-nav main-nav__catalog main-nav--closed">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -36,7 +36,7 @@
       </nav>
     </header>
 
-    <main class="page-main wrapper">
+    <main class="page-main">
       <h1 class="page-main__title title">Каталог продукции</h1>
 
       <section class="catalog">
@@ -192,7 +192,7 @@
           <li class="catalog__item">
             <article class="card card--show-all">
               <h3 class="card__title card__title--show-all">Показать еще 100500 товаров</h3>
-              <p class="card__text">На самом деле вкусов гораздо больше!</p>
+              <p class="card__text card__text--show-all">На самом деле вкусов гораздо больше!</p>
               <a class="card__button button link button--show-all" href="#">Показать все</a>
             </article>
           </li>
@@ -204,7 +204,7 @@
         <ul class="additional__list">
           <li class="additional__item">
             <h3>Сахарозаменитель</h3>
-            <dl class="additional__list">
+            <dl class="additional__description-list">
               <dt>1 упаковка (100 г)</dt>
               <dd>200 <span>р</span>.</dd>
             </dl>
@@ -235,26 +235,22 @@
             <a class="additional__button button link" href="#">Заказать</a>
           </li>
         </ul>
-
         <div class="additional__box">
-          <!-- <svg class="additional-box__icon" width="78" height="80">
-            <use xlink:href="/img/icons/icon_gift.svg"></use>
-          </svg> -->
           <p class="additional__box-text">
-            Закажите все
-            и получите чехол для
+            Закажите все<br>
+            и получите чехол для<br>
             кота в подарок!
           </p>
         </div>
       </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer main-footer--catalog">
       <section class="map">
         <div class="map__headline wrapper">
           <h2 class="visually-hidden">Карта</h2>
           <p class="map__invitation">Приглашаемк сотрудничеству дилеров!</p>
-          <p class="map__adress">ул. БольшаяКонюшенная, д. 19/8Санкт-Петербург</p>
+          <p class="map__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <img class="map__img" src="img/map.jpg" width="320" height="362" alt="Карта">
       </section>

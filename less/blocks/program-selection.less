@@ -1,9 +1,19 @@
 // Program-selection
 
-.program-selection__label {
-  color: @special_dark-grey-2;
+.program-selection {
+  border-top: 1px solid @special_grey;
+  border-bottom: 1px solid @special_grey;
 
   @media (min-width: @tablet-width) {
     grid-area: program-selection;
   }
+
+  @media (min-width: @desktop-width) {
+    border: 1px solid @special_grey;
+    align-self: center;
+  }
+}
+
+.program-selection__label {
+  color: @special_dark-grey-2;
 }

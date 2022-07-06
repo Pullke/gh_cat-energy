@@ -3,11 +3,25 @@
 .main-nav {
   position: relative;
 
+  &__form,
+  &__catalog {
+    border-bottom: 1px solid @special_grey;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-grow: 1;
     padding: 0;
-    margin-left: 95px;
+    justify-content: flex-end;
+
+    &__form,
+    &__catalog {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-end;
   }
 }
 
@@ -22,10 +36,6 @@
   background-color: inherit;
   cursor: pointer;
   border: none;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
 }
 
 .main-nav--closed .main-nav__toggle {
@@ -93,18 +103,13 @@
 .main-nav__list {
   display: flex;
   flex-direction: column;
+  padding-left: 0;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-wrap: wrap;
-    flex-grow: 1;
-    gap: 33px;
-  }
-
-  @media (min-width: @desktop-width) {
-    flex-grow: 0.3;
-    justify-content: space-between;
+    gap: 35px;
   }
 }
 
