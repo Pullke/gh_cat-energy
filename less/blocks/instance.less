@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content min-content min-content;
-  padding-bottom: 25px;
+  padding: 27px 0 25px;
   background-color: @basic_grey;
 
   @media (min-width: @tablet-width) {
@@ -20,6 +20,7 @@
 
 .instance__title {
   padding: 0 20px;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
@@ -35,12 +36,11 @@
   }
 }
 
-
 .instance__box {
-  padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content min-content;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
@@ -57,6 +57,7 @@
 .instance__text {
   grid-column-start: 1;
   grid-column-end: -1;
+  margin-bottom: 25px;
 }
 
 .instance__description-list {
@@ -64,6 +65,7 @@
   grid-column-end: -1;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
@@ -77,15 +79,20 @@
 }
 
 .instance__description-box {
-  display: grid;
-  justify-content: center;
+  margin: auto;
 }
 
 .instance__term {
+  display: table-cell;
+  width: 124px;
+  height: 64px;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
-  justify-self: center;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid @special_grey;
+  border-radius: 3px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -96,8 +103,9 @@
 .instance__description {
   width: min-content;
   text-align: center;
-  justify-self: center;
-  margin: 0;
+  margin: -9px auto 0;
+  padding: 0 20px;
+  background-color: @basic_grey;
   color: @special_dark-grey;
   font-size: 12px;
   line-height: 12px;
